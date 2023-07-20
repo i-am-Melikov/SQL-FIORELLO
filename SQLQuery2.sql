@@ -1,0 +1,23 @@
+CREATE TABLE Workers(
+Id INT PRIMARY KEY IDENTITY,
+Fullname NVARCHAR(30),
+ProfessionsId INT FOREIGN KEY REFERENCES Professions(Id))
+
+
+CREATE TABLE Professions(
+Id INT PRIMARY KEY IDENTITY,
+[Name] NVARCHAR(30)
+)
+
+INSERT INTO Professions([Name])
+VALUES	('Florist')
+--VALUES ('Manager')
+
+INSERT INTO Workers(Fullname,ProfessionsId)
+VALUES ('AMANDA WATKINS',1)
+VALUES ('BEVERLY CLARK',1)
+VALUES ('SHIRLEY HARRIS',2)
+VALUES ('CRYSTAL BROOKS',1)
+
+
+
